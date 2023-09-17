@@ -1,7 +1,9 @@
 from flask import Flask, request, abort
+from flask_cors import CORS
 
 app = Flask(__name__)
 users = []
+CORS(app, origins="*")
 
 # FUNCTIONS
 def response(message, data = None, success = True):
